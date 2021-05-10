@@ -1,16 +1,17 @@
 import React from 'react'
+import { formatter } from "../Format";
 
 function Header({ money , total}) {
 
-
 	return (
-		<div>
+		<>
 			{total > 0 ? (
-				<> Harcamak icin $ {money - total} paraniz var. </>
+				<div className="header"> HARCAMAK İÇİN <span className="money">{formatter.format(money - total)} </span>PARANIZ VAR. </div>
 			) : (
-				<> Hadi Calinti Paralar Ile Eglenelim :D</>
+				<div className="header"> HADİ ÇALINTI PARALAR İLE EĞLENELİM :D</div>
 			)}
-		</div>
+
+		</>
 	)
 }
 

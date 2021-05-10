@@ -1,10 +1,10 @@
 import React from 'react'
 
-function BasketItem({ item }) {
+function BasketItem({ item , product}) {
 	return (
-		<div>
-			{item.id} * {item.amount}
-		</div>
+		<li className="basketItem">
+			{product.title} × <span>{item.amount}</span>  
+		</li>
 	)
 }
 

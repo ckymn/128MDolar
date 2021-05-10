@@ -8,3 +8,136 @@
   border: 1px solid #ddd;
   margin-bottom:20px;
 }
+
+.header {
+  background: linear-gradient(to bottom, green, yellow);
+  border-radius: 4px;
+  padding: 5px;
+  font-family: cursive;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+.money { 
+  background: linear-gradient(to left , red, black);
+  border-radius: 4px;
+  padding: 5px;
+  color: white;
+  margin: auto 9px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} 
+
+.product {
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  width: 24%;
+}
+
+.product h6 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product .actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions button {
+  height: 40px;
+  padding: 0 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.actions button[disabled]{
+  opacity: .3;
+}
+
+.actions .amount {
+  width : 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.actions .sell-btn{ 
+  background: rgb(153, 56, 11);
+}
+.actions .rmv-btn{ 
+  background: rgb(80, 16, 1);
+}
+.actions .buy-btn{ 
+  background: rgb(29, 112, 8);
+}
+
+.product .price {
+  color: rgb(136, 62, 62);
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+}
+
+.basket-container {
+   padding: 20px;
+   background: #fff;
+   border: 1px solid #ddd;
+   text-align: left;
+}
+
+.basket-container h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+
+}
+
+.basket-container .total {
+  border: 1px solid #fff;
+  padding-top: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  color: green;
+}
+
+.basketItem {
+  padding-bottom: 10px;
+  font-size: 17px;
+}
+
+.basketItem span {
+  color: #999;
+  font-weight: bold;
+}
+
+.reset {
+  background: steelblue;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}

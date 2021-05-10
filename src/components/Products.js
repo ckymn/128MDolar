@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { formatter } from "../Format";
+
 
 function Products({ product ,basket, setBasket, total, money}) {
 
@@ -13,7 +15,7 @@ function Products({ product ,basket, setBasket, total, money}) {
 			setBasket([...basket, {
 				id: product.id,
 				amount : 1,
-				name: product.title,
+				title: product.title,
 				price: product.price
 			}])
 		}
@@ -38,15 +40,15 @@ function Products({ product ,basket, setBasket, total, money}) {
 
 	return (
 		<>
-			<div className="products">
-
+			<div className="product">
+				<img src={product.image} />
 				<h6>{product.title}</h6>
-				<h6>{basketAmount && (basketAmount.amount * basketAmount.price).toFixed(2)}</h6>
+				<div className="price">${basketAmount && (basketAmount.amount * basketAmount.price).toFixed(2)}</div>
 				<div className="actions">
-					<button disabled={!basketAmount} onClick={removeBasket}>SAT</button>
-					<button disabled={!basketAmount} onClick={allReamovebasket}>Cikar</button>
+					<button className="sell-btn" disabled={!basketAmount} onClick={removeBasket}>SAT</button>
+					<button className="rmv-btn" disabled={!basketAmount} onClick={allReamovebasket}>Cikar</button>
 					<span className="amount">{basketAmount && basketAmount.amount || 0}</span>
-					<button disabled={total + product.price > money} onClick={addBasket}>SATIN AL</button>
+					<button className="buy-btn" disabled={total + product.price > money} onClick={addBasket}>AL</button>
 				</div>
 			</div>
 		</>
